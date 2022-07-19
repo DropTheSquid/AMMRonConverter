@@ -13,7 +13,18 @@ namespace RonConverter
                 {
                     try
                     {
-                        await Converter.Convert(opts.Input, opts.output, opts.Gender);
+                        if (opts.Operation == Operation.Morph)
+                        {
+                            await Converter.GenerateMorph(opts.Input, opts.output, opts.Gender);
+                        }
+                        else if (opts.Operation == Operation.Overrides)
+                        {
+                             await Converter.Convert(opts.Input, opts.output, opts.Gender);
+                        }
+                        else if (opts.Operation == Operation.Full)
+                        {
+                            await Converter.FullCustomHead(opts.Input, opts.output, opts.Gender, opts.CustomMorphTargetName);
+                        }
 
                         return 0;
                     }

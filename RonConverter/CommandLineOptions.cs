@@ -12,6 +12,15 @@ namespace RonConverter
 
         [Option(Required = true)]
         public Gender Gender { get; set; }
+
+        [Option(Required = false, Default = Operation.Morph)]
+        public Operation Operation { get; set; }
+
+        [Option(Required = false)]
+        public string DiffFrom { get; set; }
+
+        [Option(Required = false)]
+        public string CustomMorphTargetName { get; set; }
     }
 
     public enum Gender
@@ -19,6 +28,14 @@ namespace RonConverter
         Either,
         Female,
         Male
+    }
+
+    public enum Operation
+    {
+        Overrides,
+        Morph,
+        Full,
+        MorphDiff
     }
 }
 

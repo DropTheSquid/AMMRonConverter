@@ -2,7 +2,7 @@
   "profiles": {
     "RonConverter": {
       "commandName": "Project",
-      "commandLineArgs": "\"H:\\MELE_Mods\\test mods\\Customizable Default Femshep Headmorph for Legendary Edition 3-168-1-0-1623501456\\LE3_HMF_HED_Iconic_Buzzcut.ron\" --gender=Female"
+      "commandLineArgs": "\"H:\\MELE_Mods\\test mods\\Customizable Default Femshep Headmorph for Legendary Edition 3-168-1-0-1623501456\\testIconic.ron\" --gender=Female --operation=Full"
     }
   }
 }
